@@ -1,0 +1,15 @@
+{
+    "name": "junkins/standard-auth",
+    "description": "CakePHP StandardAuth",
+    "autoload": {
+        "psr-4": {
+            "StandardAuth\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "StandardAuth\\Test\\": "tests",
+            "StandardAuth\\Test\\App\\": "tests/test_app/App"
+        }
+    }
+}
