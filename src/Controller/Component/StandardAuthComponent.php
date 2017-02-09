@@ -34,6 +34,7 @@ class StandardAuthComponent extends AuthComponent
         };
 
         $userModel = $this->getAuthenticateUserModel();
+        $controller = $this->_registry->getController();
         $entity = $controller->{$userModel}->newEntity();
         if ($controller->request->is('post')) {
             $data = $controller->request->data;
@@ -56,7 +57,6 @@ class StandardAuthComponent extends AuthComponent
      */
     private function getAuthenticateUserModel()
     {
-        $controller   = $this->_registry->getController();
         $authenticate = Hash::normalize((array)$this->_config['authenticate']);
         $userModel    = $authenticate['Form']['userModel'];
         return $userModel;
